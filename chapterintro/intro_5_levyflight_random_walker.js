@@ -1,10 +1,10 @@
 // Take bigs steps on the long tail
 class LevyFlightRandomWalker {
-  /* @param {int} x starting position
+  /**
+   * @param {int} x starting position
    * @param {int} y starting position
    */
-
-  constructor(x, y, isFancyWalker) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
     // On scale of 0 to 1
@@ -24,7 +24,6 @@ class LevyFlightRandomWalker {
     }
     this.x += stepX;
     this.y += stepY;
-    console.log("X: " + this.x);
   }
 
   display() {

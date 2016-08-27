@@ -1,9 +1,9 @@
 class GaussianRandomWalker {
-  /* @param {int} x starting position
+  /**
+   * @param {int} x starting position
    * @param {int} y starting position
    */
-
-  constructor(x, y, isFancyWalker) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
     this.SIZE = 2;

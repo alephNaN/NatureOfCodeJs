@@ -1,5 +1,6 @@
 class RandomWalker {
-  /* @param {int} x starting position
+  /**
+   * @param {int} x starting position
    * @param {int} y starting position
    * @param {boolean} isFancyWalker picks one of 9 directions,
    *    rather than default 4
