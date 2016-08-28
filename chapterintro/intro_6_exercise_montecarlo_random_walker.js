@@ -1,9 +1,9 @@
 // Take bigs steps on the long tail
 class MonteCarloRandomWalker {
-  /* @param {int} x starting position
+  /**
+   * @param {int} x starting position
    * @param {int} y starting position
    */
-
   constructor(x, y, isFancyWalker) {
     this.x = x;
     this.y = y;
