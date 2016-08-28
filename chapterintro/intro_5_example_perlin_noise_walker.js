@@ -1,7 +1,7 @@
 // TIME
 let t = 0.0;
 
-class RandomWalker {
+class PerlinNoiseWalker {
   /**
    * @param {int} x starting position
    * @param {int} y starting position
@@ -29,7 +29,7 @@ let w;
 function setup() {
   createCanvas(400,200);
   background(255);
-  w = new RandomWalker(200, 100);
+  w = new PerlinNoiseWalker(200, 100);
 }
 
 
