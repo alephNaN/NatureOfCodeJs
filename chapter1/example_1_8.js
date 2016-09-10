@@ -27,11 +27,18 @@ PVector.prototype.normalize = function() {
     this.div(m);
   }
 }
+PVector.prototype.limit = function(lim) {
+  if (this.mag() >= lim) {
+    this.normalize();
+    this.scalar(lim);
+  }
+}
 
 function Mover(l, v, a) {
   this.location = l;
   this.velocity = v;
   this.acceleration = a;
+  this.topspeed = 10;
 }
 Mover.prototype.checkEdges = function() {
     // Teleport / wrap around to alternate edge
@@ -51,6 +58,7 @@ Mover.prototype.checkEdges = function() {
 Mover.prototype.update = function() {
     this.location.add(this.velocity);
     this.velocity.add(this.acceleration);
+    this.velocity.limit(this.topspeed);
 };
 Mover.prototype.display = function() {
   stroke(0);
@@ -63,7 +71,7 @@ let mover;
 function setup() {
   createCanvas(640, 360);
   const location = new PVector(width/2, height/2);
-  const velocity = new PVector(1,1);
+  const velocity = new PVector(0,0);
   const acceleration = new PVector(.05, .01);
   mover = new Mover(location, velocity, acceleration);
 }
