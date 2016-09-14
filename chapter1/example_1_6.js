@@ -20,13 +20,13 @@ PVector.prototype.div = function(n) {
 };
 PVector.prototype.mag = function() {
   return Math.sqrt(this.x*this.x + this.y*this.y);
-}
+};
 PVector.prototype.normalize = function() {
   const m = this.mag();
   if ( m !== 0 ) {
     this.div(m);
   }
-}
+};
 
 function setup() {
   createCanvas(640, 360);

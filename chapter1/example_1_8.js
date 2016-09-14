@@ -20,19 +20,19 @@ PVector.prototype.div = function(n) {
 };
 PVector.prototype.mag = function() {
   return Math.sqrt(this.x*this.x + this.y*this.y);
-}
+};
 PVector.prototype.normalize = function() {
   const m = this.mag();
   if ( m !== 0 ) {
     this.div(m);
   }
-}
+};
 PVector.prototype.limit = function(lim) {
   if (this.mag() >= lim) {
     this.normalize();
     this.scalar(lim);
   }
-}
+};
 
 function Mover(l, v, a) {
   this.location = l;

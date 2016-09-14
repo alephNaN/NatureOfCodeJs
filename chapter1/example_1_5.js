@@ -16,7 +16,7 @@ PVector.prototype.scalar = function(n) {
 };
 PVector.prototype.mag = function() {
   return Math.sqrt(this.x*this.x + this.y*this.y);
-}
+};
 
 function setup() {
   createCanvas(640, 360);
