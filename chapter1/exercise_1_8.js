@@ -51,8 +51,6 @@ function MouseMover(l, v) {
   this.location = l;
   this.velocity = v;
   this.topspeed = 10;
-  this.t1 = 1000;
-  this.t2 = 500;
 };
 MouseMover.prototype.checkEdges = function() {
     // Teleport / wrap around to alternate edge
@@ -77,7 +75,7 @@ MouseMover.prototype.update = function() {
 
     this.acceleration = a;
     this.velocity.add(this.acceleration);
-    this.velocity.limit(10);
+    this.velocity.limit(this.topspeed);
 };
 MouseMover.prototype.display = function() {
   stroke(0);
