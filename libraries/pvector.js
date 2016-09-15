@@ -39,6 +39,9 @@ PVector.prototype.limit = function(lim) {
   }
   return this;
 };
+PVector.prototype.dupe = function() {
+  return new PVector(this.x, this.y);
+};
 PVector.random = function() {
   const x = Math.random() - .5;
   const y = Math.random() - .5;
