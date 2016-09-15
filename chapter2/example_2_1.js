@@ -42,7 +42,7 @@ MovingBody.prototype.display = function() {
   ellipse(this.location.x,this.location.y,this.mass*16,this.mass*16);
 };
 
-let mover
+let mover;
 function setup() {
   createCanvas(640, 360);
   mover = new MovingBody(2);
