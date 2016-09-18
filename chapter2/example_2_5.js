@@ -76,7 +76,7 @@ function setup() {
   createCanvas(640, 360);
   let n = 10;
   while(n--) {
-    const m = new MovingBody(random(1,2),n*width/10+50,0);
+    const m = new MovingBody(1,n*width/10+50,n*10);
     movers.push(m);
   }
   liquid = new Liquid(0, height/2, width, height/2, .5);
